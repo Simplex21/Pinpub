@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pinpub</string>
+    <string name="nav_header_title">Pinpub</string>
+    <string name="nav_addition">Addition</string>
+    <string name="nav_substraction">Substraktion</string>
+    <string name="nav_multiplication">Multiplication</string>
+    <string name="nav_division">Division</string>
+</resources>

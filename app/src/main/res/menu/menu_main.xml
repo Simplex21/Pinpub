@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_addition"
+        android:title="@string/nav_addition" />
+
+    <item
+        android:id="@+id/nav_substraction"
+        android:title="@string/nav_substraction"/>
+
+    <item
+        android:id="@+id/nav_multiplication"
+        android:title="@string/nav_multiplication"/>
+
+    <item
+        android:id="@+id/nav_division"
+        android:title="@string/nav_division"/>
+
+</menu>
