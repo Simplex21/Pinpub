@@ -2,7 +2,10 @@
     <string name="app_name">Pinpub</string>
     <string name="nav_header_title">Pinpub</string>
     <string name="nav_addition">Addition</string>
-    <string name="nav_substraction">Substraktion</string>
+    <string name="nav_subtraction">Subtraktion</string>
     <string name="nav_multiplication">Multiplication</string>
     <string name="nav_division">Division</string>
+    <string name="already_on_activity">Bereits auf der Seite</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

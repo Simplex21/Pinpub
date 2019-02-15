@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DivisionActivity"></activity>
+        <activity android:name=".SubtractionActivity"></activity>
+        <activity android:name=".DivisionActivity" />
         <activity android:name=".AdditionActivity" />
-        <activity android:name=".SubstractionActivity" />
         <activity android:name=".MultiplicationActivity" />
         <activity android:name=".secondActivity" />
         <activity android:name=".MainActivity">

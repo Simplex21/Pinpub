@@ -23,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar actionbar = getSupportActionBar();
+        actionbar.setDisplayHomeAsUpEnabled(true);
+        actionbar.setHomeAsUpIndicator(R.drawable.ic_menu_camera);
+        */
+
         TextView firstNumTextView = findViewById(R.id.firstNumTextView);
         TextView secondNumTextView = findViewById(R.id.secondNumTextView);
         int randNum1 = ThreadLocalRandom.current().nextInt(10, 100 + 1);
@@ -30,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         firstNumTextView.setText(randNum1 + "");
         secondNumTextView.setText(randNum2 + "");
 
-        Button submitBtn = (Button) findViewById(R.id.submitBtn);
+        Button submitBtn = findViewById(R.id.submitBtn);
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
                         if (menuItem.getItemId() == R.id.nav_addition) {
                             Intent startIntent = new Intent(getApplicationContext(), AdditionActivity.class);
                             startActivity(startIntent);
-                        } else if (menuItem.getItemId() == R.id.nav_substraction) {
-                            Intent startIntent = new Intent(getApplicationContext(), SubstractionActivity.class);
+                        } else if (menuItem.getItemId() == R.id.nav_subtraction) {
+                            Intent startIntent = new Intent(getApplicationContext(), SubtractionActivity.class);
                             startActivity(startIntent);
                         } else if (menuItem.getItemId() == R.id.nav_multiplication) {
                             Intent startIntent = new Intent(getApplicationContext(), MultiplicationActivity.class);

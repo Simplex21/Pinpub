@@ -6,8 +6,8 @@
         android:title="@string/nav_addition" />
 
     <item
-        android:id="@+id/nav_substraction"
-        android:title="@string/nav_substraction"/>
+        android:id="@+id/nav_subtraction"
+        android:title="@string/nav_subtraction"/>
 
     <item
         android:id="@+id/nav_multiplication"
