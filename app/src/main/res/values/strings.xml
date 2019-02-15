@@ -8,4 +8,12 @@
     <string name="already_on_activity">Bereits auf der Seite</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="accept">Bestätigen</string>
+    <string name="plus_zeichen">+</string>
+    <string name="result">Ergebnis</string>
+    <string name="right_expression">RICHTIG :D</string>
+    <string name="wrong_expression">FALSCH ;)</string>
+    <string name="reward_text">Gut gemacht! :)</string>
+    <string name="empty_input">**keine Eingabe**</string>
+    <string name="sth_wrong">Systemfehler</string>
 </resources>

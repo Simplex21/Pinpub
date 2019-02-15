@@ -8,8 +8,6 @@
     android:fitsSystemWindows="true"
     tools:context=".AdditionActivity">
 
-
-
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -41,31 +39,29 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="Bestätigen"
+            android:text="@string/accept"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add_userEntryEditText" />
 
         <TextView
-            android:id="@+id/zahl1TextView"
+            android:id="@+id/add_zahl1TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="TextView"
+            android:layout_marginEnd="8dp"
             android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/add_plusTextView"
             app:layout_constraintTop_toBottomOf="@+id/add_indicatorTextView" />
 
         <TextView
             android:id="@+id/add_zahl2TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="TextView"
             android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/add_plusTextView"
             app:layout_constraintTop_toBottomOf="@+id/add_indicatorTextView" />
 
         <TextView
@@ -75,10 +71,10 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="+"
+            android:text="@string/plus_zeichen"
             android:textSize="24sp"
-            app:layout_constraintEnd_toStartOf="@+id/add_zahl2TextView"
-            app:layout_constraintStart_toEndOf="@+id/zahl1TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add_indicatorTextView" />
 
         <EditText
@@ -89,7 +85,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:ems="10"
+            android:hint="@string/result"
             android:inputType="number"
+            android:singleLine="true"
+            android:textAlignment="center"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
