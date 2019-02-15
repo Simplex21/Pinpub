@@ -36,6 +36,8 @@ public class AdditionActivity extends AppCompatActivity {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        // TODO: 15.02.19 Zurückbutton für das Schließen vom Drawer (im Drawermenü)
+
         // Das Menü des Drawers interaktiv machen, sodass auf andere Aktivitäten zugeriffen werden kann
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(
