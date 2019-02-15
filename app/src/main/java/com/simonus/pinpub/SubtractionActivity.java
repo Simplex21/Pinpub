@@ -3,11 +3,11 @@ package com.simonus.pinpub;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SubstractionActivity extends AppCompatActivity {
+public class SubtractionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_substraction);
+        setContentView(R.layout.activity_subtraction);
     }
 }
