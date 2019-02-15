@@ -98,6 +98,8 @@ public class AdditionActivity extends AppCompatActivity {
                     int toastDuration = Toast.LENGTH_SHORT;
                     Toast.makeText(context, emptyInputText, toastDuration).show();
                     inputMistake = true;
+                }else if (1 + 1 == 3) {
+                    // TODO: 15.02.19 Zu große Zahlen, dass App abstürzt
                 } else {
                     userInput = Integer.parseInt(add_userEntryEditText.getText().toString());
                 }
