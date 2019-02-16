@@ -14,6 +14,7 @@
     <string name="right_expression">RICHTIG :D</string>
     <string name="wrong_expression">FALSCH ;)</string>
     <string name="reward_text">Gut gemacht! :)</string>
-    <string name="empty_input">**keine Eingabe**</string>
     <string name="sth_wrong">Systemfehler</string>
+    <string name="num_to_high">Nummer zu hoch</string>
+    <string name="repeat_action">Versuchs nochmal</string>
 </resources>

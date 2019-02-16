@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -84,25 +85,24 @@ public class AdditionActivity extends AppCompatActivity {
                 // Alle Views ansprechen und ihren Wert auslesen, sowie ersetzen oder festlegen
                 TextView add_zahl1TextView = findViewById(R.id.add_zahl1TextView);
                 TextView add_zahl2TextView = findViewById(R.id.add_zahl2TextView);
-                TextView add_userEntryEditText = findViewById(R.id.add_userEntryEditText);
+                EditText add_userEntryEditText = findViewById(R.id.add_userEntryEditText);
                 TextView add_indicatorTextView = findViewById(R.id.add_indicatorTextView);
 
+                // Nummernzuweisung an Integer und Declarierung der Benutzereingabe (int) und des Eingabefehlers (boolean)
                 int num1 = Integer.parseInt(add_zahl1TextView.getText().toString());
                 int num2 = Integer.parseInt(add_zahl2TextView.getText().toString());
-
                 int userInput = 0;
+                // Falls ein Fehler vorkommt wird dieser Wert auf True gesetzt
                 boolean inputMistake = false;
 
-                // Herausfinden, ob der Benutzereingabe ein leerer String ist
                 if (add_userEntryEditText.getText().toString().equals("")) {
-                    Context context = getApplicationContext();
-                    CharSequence emptyInputText = getString(R.string.empty_input);
-                    int toastDuration = Toast.LENGTH_SHORT;
-                    Toast.makeText(context, emptyInputText, toastDuration).show();
+                    // Herausfinden, ob die Benutzereingabe ein leerer String ist
                     inputMistake = true;
-                }else if (1 + 1 == 3) {
-                    // TODO: 15.02.19 Zu große Zahlen, dass App abstürzt
+                } else if (add_userEntryEditText.getText().toString().length() > 9) {
+                    // Herausfinden, ob die Benutzereingabe eine nicht zu verarbeitende (zu große) Zahl enthält
+                    inputMistake = true;
                 } else {
+                    // Wenn oben definiertes nicht in Kraft tritt, wird der Benutzereingabe - Variable der Wert der Benutzereingabe zugewiesen
                     userInput = Integer.parseInt(add_userEntryEditText.getText().toString());
                 }
 
@@ -117,19 +117,23 @@ public class AdditionActivity extends AppCompatActivity {
                     add_userEntryEditText.setText("");
 
                     // Toast anzeigen, wenn Ergebnis richtig war
-                    Context context = getApplicationContext();
-                    CharSequence rewardText = getString(R.string.reward_text);
-                    int toastDuration = Toast.LENGTH_SHORT;
-                    Toast.makeText(context, rewardText, toastDuration).show();
+                    Toast.makeText(getApplicationContext(), R.string.reward_text, Toast.LENGTH_LONG).show();
                 } else if (inputMistake) {
+                    // Anzeigen, dass ein Fehler gemacht wurde (z.B. keine Eingabe)
                     add_indicatorTextView.setText(R.string.sth_wrong);
+                } else if (Integer.parseInt(add_userEntryEditText.getText().toString()) > result) {
+                    // Wenn die Eingabe größer als das Ergebnis ist, dann wird es angezeigt
+                    add_indicatorTextView.setText(R.string.num_to_high);
+                    Toast.makeText(getApplicationContext(), R.string.num_to_high, Toast.LENGTH_LONG).show();
                 } else {
+                    // hier werden alle anderen Fehler (falsche Antworten) angezeigt
                     add_indicatorTextView.setText(R.string.wrong_expression);
+                    Toast.makeText(getApplicationContext(), R.string.repeat_action, Toast.LENGTH_LONG).show();
                 }
             }
         });
     }
-
+    // Funktion zur Erstellung von zufälligen Zahlen
     public int randInt(int origin, int bound) {
         return ThreadLocalRandom.current().nextInt(origin, bound + 1);
     }
