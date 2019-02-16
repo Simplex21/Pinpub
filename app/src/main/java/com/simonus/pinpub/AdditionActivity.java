@@ -121,7 +121,7 @@ public class AdditionActivity extends AppCompatActivity {
                 } else if (inputMistake) {
                     // Anzeigen, dass ein Fehler gemacht wurde (z.B. keine Eingabe)
                     add_indicatorTextView.setText(R.string.sth_wrong);
-                } else if (Integer.parseInt(add_userEntryEditText.getText().toString()) > result) {
+                } else if (Integer.parseInt(add_userEntryEditText.getText().toString()) < result) {
                     // Wenn die Eingabe größer als das Ergebnis ist, dann wird es angezeigt
                     add_indicatorTextView.setText(R.string.num_to_high);
                     Toast.makeText(getApplicationContext(), R.string.num_to_high, Toast.LENGTH_LONG).show();
