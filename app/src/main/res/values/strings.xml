@@ -19,4 +19,6 @@
     <string name="num_to_high">Nummer zu hoch</string>
     <string name="num_to_low">Nummer zu niedrig</string>
     <string name="repeat_action">Versuchs nochmal</string>
+    <string name="simple_button">simple button</string>
+    <string name="changePicture">change - picture</string>
 </resources>

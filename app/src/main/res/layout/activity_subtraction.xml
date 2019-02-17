@@ -32,79 +32,30 @@
 
         </FrameLayout>
 
-        <Button
-            android:id="@+id/sub_bestBtn"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="@string/accept"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sub_userEntryEditText" />
+            app:layout_constraintTop_toBottomOf="@+id/content_frame">
 
-        <TextView
-            android:id="@+id/sub_zahl1TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toStartOf="@+id/sub_plusTextView"
-            app:layout_constraintTop_toBottomOf="@+id/sub_indicatorTextView" />
+            <ImageView
+                android:id="@+id/simpleImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/changePicture"
+                android:src="@drawable/bali"/>
 
-        <TextView
-            android:id="@+id/sub_zahl2TextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/sub_plusTextView"
-            app:layout_constraintTop_toBottomOf="@+id/sub_indicatorTextView" />
+            <Button
+                android:id="@+id/simpleBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/simple_button" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/sub_plusTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="@string/minus_icon"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sub_indicatorTextView" />
-
-        <EditText
-            android:id="@+id/sub_userEntryEditText"
-            android:layout_width="139dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:hint="@string/result"
-            android:inputType="number"
-            android:singleLine="true"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sub_plusTextView" />
-
-        <TextView
-            android:id="@+id/sub_indicatorTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/content_frame" />
 
     </android.support.constraint.ConstraintLayout>
 
