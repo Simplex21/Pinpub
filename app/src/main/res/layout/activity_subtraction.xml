@@ -43,7 +43,8 @@
             <ImageView
                 android:id="@+id/simpleImage"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/changePicture"
                 android:src="@drawable/bali"/>
@@ -54,6 +55,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/simple_button" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
         </LinearLayout>
 
 
